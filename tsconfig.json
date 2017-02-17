@@ -1,16 +1,1 @@
-{
-    "compilerOptions": {
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "declaration": true,
-        "outDir": "dist"
-    },
-    "exclude": [
-        "node_modules",
-        "dist",
-        "samples"
-    ]
-}
+{}
