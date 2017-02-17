@@ -29,7 +29,7 @@ export interface IFunctionResponse {
         [s: string]: any;
     };
 }
-export declare enum HttpStatusCodes {
+export declare const enum HttpStatusCodes {
     Continue = 100,
     SwitchingProtocols = 101,
     Processing = 102,
