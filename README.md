@@ -4,10 +4,10 @@
 
 These are some helper libraries for folks trying to use TypeScript with Azure Functions
 
-`npm install --save @mattmazzola/azure-functions-typescript`
+`npm install --save @ksjogo/azure-functions-typescript`
 
 ```typescript
-import { IHttpContext, IFunctionRequest, HttpStatusCodes } from 'azure-functions-typescript'
+import { IHttpContext, IFunctionRequest, HttpStatusCodes } from 'ksjogo/azure-functions-typescript'
 
 export function index(context: IHttpContext, req: IFunctionRequest) {
     if(req.method == "GET")
@@ -41,7 +41,7 @@ You're also welcome to send a PR after following the instructions below. If it's
 1. Use node version 5.9.1
 2. Clone repo:
 
-    `git clone https://github.com/christopheranderson/azure-functions-typescript.git` 
+    `git clone https://github.com/ksjogo/azure-functions-typescript.git` 
     `cd azure-functions-typescript`
 
 3. Install dependences - `npm install`
