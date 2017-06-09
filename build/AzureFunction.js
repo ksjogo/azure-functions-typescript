@@ -15,7 +15,10 @@ export class AzureFunction {
         }, (reject) => {
             context.done(null, {
                 status: 400,
-                body: reject
+                headers: {
+                    'content-type': 'plain/text'
+                },
+                body: reject.toString()
             });
         });
     }

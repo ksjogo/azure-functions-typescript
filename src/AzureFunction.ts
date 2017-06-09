@@ -14,10 +14,13 @@ export abstract class AzureFunction {
                 },
                 body: success
             })
-        }, (reject: any) => {
-            context.done(null, {
+        }, (reject: Error) => {
+            context.done({
                 status: HttpStatusCodes.BadRequest,
-                body: reject
+                headers: {
+                    'content-type': 'plain/text'
+                },
+                body: reject.toString()
             })
         })
     }
