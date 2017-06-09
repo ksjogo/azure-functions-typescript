@@ -1,33 +1,33 @@
-import { IContext } from "./context";
-export declare type HttpMethod = "OPTIONS" | "GET" | "HEAD" | "POST" | "PUT" | "DELETE" | "TRACE" | "CONNECT" | "PATCH";
+import { IContext } from './context'
+export declare type HttpMethod = 'OPTIONS' | 'GET' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' | 'TRACE' | 'CONNECT' | 'PATCH'
 export interface IFunctionRequest {
-    originalUrl: string;
-    method: HttpMethod;
+    originalUrl: string
+    method: HttpMethod
     query: {
         [s: string]: string;
-    };
+    }
     headers: {
         [s: string]: string;
-    };
-    body: any;
-    rawbody: any;
+    }
+    body: any
+    rawbody: any
 }
 export interface IFunctionResponse {
-    body?: any;
-    status?: HttpStatusCodes;
+    body?: any
+    status?: HttpStatusCodes
     headers?: {
-        "content-type"?: string;
-        "content-length"?: number;
-        "content-disposition"?: string;
-        "content-encoding"?: string;
-        "content-language"?: string;
-        "content-range"?: string;
-        "content-location"?: string;
-        "content-md5"?: string;
-        "expires"?: Date;
-        "last-modified"?: Date;
+        'content-type'?: string;
+        'content-length'?: number;
+        'content-disposition'?: string;
+        'content-encoding'?: string;
+        'content-language'?: string;
+        'content-range'?: string;
+        'content-location'?: string;
+        'content-md5'?: string;
+        'expires'?: Date;
+        'last-modified'?: Date;
         [s: string]: any;
-    };
+    }
 }
 export declare const enum HttpStatusCodes {
     Continue = 100,
@@ -114,8 +114,7 @@ export declare const enum HttpStatusCodes {
     ATimeoutOccurred = 524,
     SSLHandshakeFailed = 525,
     InvalidSSLCertificate = 526,
-    SiteIsFrozen = 530,
+    SiteIsFrozen = 530
 }
 export interface IHttpContext extends IContext {
-    res: IFunctionResponse;
-}
+    res: IFunctionResponse}

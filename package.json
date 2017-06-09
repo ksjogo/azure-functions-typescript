@@ -14,5 +14,13 @@
         "typescript"
     ],
     "author": "Johannes Goslar",
-    "license": "MIT"
+    "license": "MIT",
+    "scripts": {
+        "lint": "./node_modules/.bin/tslint --type-check --project . src/*.ts --fix"
+    },
+    "devDependencies": {
+        "tslint": "^5.4.3",
+        "tslint-config-standard": "^5.0.2",
+        "typescript": "next"
+    }
 }
