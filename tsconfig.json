@@ -1,10 +1,20 @@
 {
     "compilerOptions": {
+        "target": "es6",
+        "outDir": "build",
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "removeComments": true,
         "alwaysStrict": true,
-        "strictNullChecks": true,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "alwaysStrict": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
-        "noImplicitReturns": true
+        "noImplicitReturns": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ]
     },
     "include": [
         "src/*.ts"

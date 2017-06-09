@@ -2,7 +2,8 @@
     "name": "@ksjogo/azure-functions-typescript",
     "version": "1.0.0",
     "description": "Helper library for using TypeScript with Azure Functions",
-    "typings": "src/index.d.ts",
+    "typings": "src/index.ts",
+    "main": "build/index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/ksjogo/azure-functions-typescript.git"
@@ -16,9 +17,11 @@
     "author": "Johannes Goslar",
     "license": "MIT",
     "scripts": {
-        "lint": "./node_modules/.bin/tslint --type-check --project . src/*.ts --fix"
+        "lint": "./node_modules/.bin/tslint --type-check --project . src/*.ts --fix",
+        "build": "./node_modules/.bin/tsc"
     },
     "devDependencies": {
+        "@types/node": "^7.0.29",
         "tslint": "^5.4.3",
         "tslint-config-standard": "^5.0.2",
         "typescript": "next"
