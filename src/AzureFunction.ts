@@ -1,5 +1,4 @@
-import { IHttpContext, IFunctionRequest, HttpStatusCodes, IFunctionResponse } from './index'
-import Logger from './Logger'
+import { IHttpContext, IFunctionRequest, HttpStatusCodes, IFunctionResponse, Logger } from './index'
 
 export abstract class AzureFunction {
 

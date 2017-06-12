@@ -1,6 +1,6 @@
 import { IHttpContext } from './index'
 
-export enum LogLevel {
+enum LogLevel {
     FATAL = 1,
     ERROR = 2,
     WARN = 3,
@@ -9,7 +9,7 @@ export enum LogLevel {
     TRACE = 6
 }
 
-export class Logger {
+class Logger {
     public level: number = 2
     private context: IHttpContext = null
 
