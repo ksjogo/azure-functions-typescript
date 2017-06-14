@@ -11,7 +11,7 @@ enum LogLevel {
 
 class Logger {
     public level: number = 2
-    private context: IHttpContext = null
+    public context: IHttpContext = null
 
     public prepareLogger (c: IHttpContext) {
         this.context = c

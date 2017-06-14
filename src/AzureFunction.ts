@@ -6,6 +6,7 @@ export abstract class AzureFunction {
 
     public index (context: IHttpContext, req: IFunctionRequest) {
         Logger.prepareLogger(context)
+        this.preHandler(req)
         this.handler(req).then((success: any) => {
             context.done(null, {
                 headers: {
@@ -22,6 +23,10 @@ export abstract class AzureFunction {
                 body: reject.toString()
             })
         })
+    }
+
+    preHandler(req: IFunctionRequest) {
+
     }
 
     abstract async handler (req: IFunctionRequest): Promise<any>
