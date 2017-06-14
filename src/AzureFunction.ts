@@ -25,9 +25,7 @@ export abstract class AzureFunction {
         })
     }
 
-    preHandler(req: IFunctionRequest) {
-
-    }
+    abstract preHandler(req: IFunctionRequest): void
 
     abstract async handler (req: IFunctionRequest): Promise<any>
 }

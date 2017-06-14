@@ -1,4 +1,4 @@
-export var LogLevel;
+var LogLevel;
 (function (LogLevel) {
     LogLevel[LogLevel["FATAL"] = 1] = "FATAL";
     LogLevel[LogLevel["ERROR"] = 2] = "ERROR";
@@ -7,7 +7,7 @@ export var LogLevel;
     LogLevel[LogLevel["DEBUG"] = 5] = "DEBUG";
     LogLevel[LogLevel["TRACE"] = 6] = "TRACE";
 })(LogLevel || (LogLevel = {}));
-export class Logger {
+class Logger {
     constructor() {
         this.level = 2;
         this.context = null;

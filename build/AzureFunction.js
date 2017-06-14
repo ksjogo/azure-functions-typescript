@@ -1,10 +1,11 @@
-import Logger from './Logger';
+import { Logger } from './index';
 export class AzureFunction {
     constructor() {
         this.contentType = 'application/json';
     }
     index(context, req) {
         Logger.prepareLogger(context);
+        this.preHandler(req);
         this.handler(req).then((success) => {
             context.done(null, {
                 headers: {
@@ -13,7 +14,7 @@ export class AzureFunction {
                 body: success
             });
         }, (reject) => {
-            context.done(null, {
+            context.done({
                 status: 400,
                 headers: {
                     'content-type': 'plain/text'
