@@ -15,7 +15,7 @@ export abstract class AzureFunction {
                 body: success
             })
         }, (reject: Error) => {
-            context.done({
+            context.done(null, {
                 status: HttpStatusCodes.BadRequest,
                 headers: {
                     'content-type': 'plain/text'
@@ -25,7 +25,7 @@ export abstract class AzureFunction {
         })
     }
 
-    abstract preHandler(req: IFunctionRequest): void
+    abstract preHandler (req: IFunctionRequest): void
 
     abstract async handler (req: IFunctionRequest): Promise<any>
 }

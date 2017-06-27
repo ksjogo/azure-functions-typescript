@@ -14,7 +14,7 @@ export class AzureFunction {
                 body: success
             });
         }, (reject) => {
-            context.done({
+            context.done(null, {
                 status: 400,
                 headers: {
                     'content-type': 'plain/text'
