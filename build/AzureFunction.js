@@ -13,7 +13,7 @@ export class AzureFunction {
                 },
                 body: success
             });
-        }, (reject) => {
+        }).catch((reject) => {
             context.done(null, {
                 status: 400,
                 headers: {

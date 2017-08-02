@@ -15,7 +15,7 @@ class Logger {
 
     public prepareLogger (c: IHttpContext) {
         this.context = c
-        this.level = process.env.LOGGER_LEVEL as LogLevel
+        this.level = +process.env.LOGGER_LEVEL as LogLevel
     }
 
     public warning (...things: any[]) {

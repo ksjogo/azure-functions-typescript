@@ -14,7 +14,7 @@ export abstract class AzureFunction {
                 },
                 body: success
             })
-        }, (reject: Error) => {
+        }).catch((reject: Error) => {
             context.done(null, {
                 status: HttpStatusCodes.BadRequest,
                 headers: {

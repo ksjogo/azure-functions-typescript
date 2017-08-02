@@ -1,4 +1,4 @@
-import {IFunctionResponse} from './http'
+import { IFunctionResponse } from './http'
 
 export interface IContext {
     invocationId: string

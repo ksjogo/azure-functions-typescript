@@ -17,12 +17,12 @@
     "author": "Johannes Goslar",
     "license": "MIT",
     "scripts": {
-        "lint": "./node_modules/.bin/tslint --type-check --project . src/*.ts --fix",
+        "lint": "tslint src/*.ts --config tslint.json  --fix --project tsconfig.json",
         "build": "./node_modules/.bin/tsc"
     },
     "devDependencies": {
-        "@types/node": "^8.0.3",
-        "tslint": "^5.4.3",
+        "@types/node": "^8.0.19",
+        "tslint": "^5.5.0",
         "tslint-config-standard": "^5.0.2",
         "typescript": "next"
     }

@@ -14,7 +14,7 @@ class Logger {
     }
     prepareLogger(c) {
         this.context = c;
-        this.level = process.env.LOGGER_LEVEL;
+        this.level = +process.env.LOGGER_LEVEL;
     }
     warning(...things) {
         if (this.context && LogLevel.WARN <= this.level)
