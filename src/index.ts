@@ -1,9 +1,9 @@
 // pure declarations
-export * from './http'
-export * from './context'
+export {HttpMethod, IFunctionRequest, IFunctionResponse, HttpStatusCodes, IHttpContext} from './http'
+export {IContext} from './context'
 
 // helpers
-export * from './AzureFunction'
+export {AzureFunction} from './AzureFunction'
 
 import Logger from './Logger'
 export {Logger}

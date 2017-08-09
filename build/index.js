@@ -1,4 +1,3 @@
-export * from './http';
-export * from './AzureFunction';
+export { AzureFunction } from './AzureFunction';
 import Logger from './Logger';
 export { Logger };
