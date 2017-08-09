@@ -1,6 +1,6 @@
 {
     "name": "@ksjogo/azure-functions-typescript",
-    "version": "1.1.4",
+    "version": "1.2.0",
     "description": "Helper library for using TypeScript with Azure Functions",
     "typings": "src/index.ts",
     "main": "build/index.js",
@@ -21,9 +21,9 @@
         "build": "./node_modules/.bin/tsc"
     },
     "devDependencies": {
-        "@types/node": "^8.0.19",
-        "tslint": "^5.5.0",
+        "@types/node": "^8.0.20",
+        "tslint": "^5.6.0",
         "tslint-config-standard": "^5.0.2",
-        "typescript": "next"
+        "typescript": "^2.5.0-dev.20170808"
     }
 }
